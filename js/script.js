@@ -18,12 +18,12 @@ if (navigator.serviceWorker) {
 /**
  * This function converts Fahrenheit to Celsius
  */
- function enterClicked() {
+function enterClicked() {
   //input
   const fahrenheit = parseFloat(document.getElementById("fahrenheit").value)
 
   //process
-  const celsius = (fahrenheit - 32) * 5/9
+  const celsius = ((fahrenheit - 32) * 5) / 9
 
   //output
   document.getElementById("celsius").innerHTML =
