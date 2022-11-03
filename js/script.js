@@ -10,14 +10,22 @@
  * Check service worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
+  navigator.serviceWorker.register("/ICS2O-Unit3-04/sw.js", {
+    scope: "/ICS2O-Unit3-04/",
   })
 }
 
 /**
- * This function displays an alert.
+ * This function converts Fahrenheit to Celsius
  */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+ function enterClicked() {
+  //input
+  const fahrenheit = parseFloat(document.getElementById("fahrenheit").value)
+
+  //process
+  const celsius = (fahrenheit - 32) * 5/9
+
+  //output
+  document.getElementById("celsius").innerHTML =
+    "(" + fahrenheit + "℉ - 32) x 5/9 = " + celsius.toFixed(2) + "℃"
 }
